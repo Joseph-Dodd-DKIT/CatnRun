@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1057269093047879215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.400455, y: -0.42492458, z: 0}
+  m_LocalPosition: {x: 15.8, y: -2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,11 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffe1f6dd7e6bb541b16fe2dc2126df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: -1
   speed: 4
+  JumpSpeed: 10
   DieTime: 0.3
   Health: 1
-  JumpChance: 5
-  JumpHeight: 7
+  DieCount: 0
+  JumpChance: 1
+  Spawner: {fileID: 0}
 --- !u!212 &5665938995856506298
 SpriteRenderer:
   m_ObjectHideFlags: 0

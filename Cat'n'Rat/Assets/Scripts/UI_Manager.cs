@@ -4,18 +4,19 @@ using UnityEngine.UI;
 public class UI_Manager : MonoBehaviour
 {
 
-    public Text TimeRecord;
+    public Text TimeLive;
     public Image[] heart;
+    public Image PowerTimer;
 
     public void update()
     {
-        float TimeNum = Time.deltaTime;
         Debug.Log("TIME TIME TIME");
+        TimeRec();
     }
 
-    public void TimeRec(float TimeNum)
+    public void TimeRec()
     {
-        TimeRecord.text = TimeNum.ToString();
+        TimeLive.text = Time.deltaTime.ToString();
     }
 
 

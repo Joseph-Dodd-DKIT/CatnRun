@@ -6,6 +6,8 @@ public class Spawn : MonoBehaviour
     private float time = 0;
     public GameObject obsticale;
 
+    public int DieCount;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +25,17 @@ public class Spawn : MonoBehaviour
 
             Destroy(go, 15);
         }
+
+        
+        if (queTime > 0.5f && DieCount == 10)
+        {
+            queTime = queTime-0.1f;
+            DieCount = 0;
+            //Debug.Log("Que Is lower. "+queTime);
+        }
+        
+
+        
 
         time += Time.deltaTime;
     }

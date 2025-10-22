@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
 
     private Vector2 startPosition;
 
-    //                                              ADD Health system.
+    
 
     public int Lives = 3;
-    //public Image PowerTimer;
+    public Image PowerTimer;
     [SerializeField] private UI_Manager ui;
 
 
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         startPosition = transform.position;
+        ui = GameObject.Find("Canvas").GetComponent<UI_Manager>();
     }
         //Update function.
     void Update()
@@ -81,7 +82,7 @@ public class Player : MonoBehaviour
         {
             PowerUpTimeRemain -= Time.deltaTime;
 
-            //PowerTimer.fillAmount = PowerUpTimeRemain / DefaultPowerUpTime;
+            ui.PowerTimer.fillAmount = PowerUpTimeRemain / DefaultPowerUpTime;
 
             if(PowerUpTimeRemain < 0)
             {
@@ -120,11 +121,12 @@ public class Player : MonoBehaviour
         {
             Debug.Log("HIT");
             Lives--;
+            
+            ui.UpdateLives(Lives);
             if(Lives <= 0)
         {
             SceneManager.LoadScene("StartScene");
         }
-            //UI_Manager.UpdateLives(Lives);
             transform.position = startPosition;
         }
     }
@@ -142,6 +144,7 @@ public class Player : MonoBehaviour
 
             //PowerTimer.enabled = true;
         }
+        
     }
 
 
