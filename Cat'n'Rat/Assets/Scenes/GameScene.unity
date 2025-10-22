@@ -1137,6 +1137,7 @@ GameObject:
   - component: {fileID: 1535702002}
   - component: {fileID: 1535702000}
   - component: {fileID: 1535701999}
+  - component: {fileID: 1535702003}
   m_Layer: 16
   m_Name: Canvas
   m_TagString: Untagged
@@ -1249,6 +1250,14 @@ MonoBehaviour:
   - {fileID: 1081857603}
   - {fileID: 994648446}
   PowerTimer: {fileID: 691565945}
+--- !u!222 &1535702003
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535701997}
+  m_CullTransparentMesh: 1
 --- !u!1 &1677705960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1269,7 @@ GameObject:
   - component: {fileID: 1677705961}
   - component: {fileID: 1677705962}
   m_Layer: 0
-  m_Name: Spawner(2)
+  m_Name: Spawner(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1819,8 +1828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  JumpHeight: 8
-  DefaultPowerUpTime: 5
+  JumpHeight: 7
+  DefaultPowerUpTime: 3
   fireTimer: 0.5
   fireCountdown: 0
   ProjectilePrefad: {fileID: 5883922806067073620, guid: 0161629bbbbdb07498374cff3dc02ebb, type: 3}

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public float queTime=1.5f;
+    public float queTime;
     private float time = 0;
     public GameObject obsticale;
 
@@ -27,15 +27,13 @@ public class Spawn : MonoBehaviour
         }
 
         
-        if (queTime > 0.5f && DieCount == 10)
+        if (queTime > 0.3f && DieCount == 10)
         {
             queTime = queTime-0.1f;
+            Debug.Log("Que Is lower. "+queTime);
             DieCount = 0;
-            //Debug.Log("Que Is lower. "+queTime);
+            
         }
-        
-
-        
 
         time += Time.deltaTime;
     }

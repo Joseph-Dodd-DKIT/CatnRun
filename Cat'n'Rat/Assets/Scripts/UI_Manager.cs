@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
+
 public class UI_Manager : MonoBehaviour
 {
 
@@ -8,15 +10,28 @@ public class UI_Manager : MonoBehaviour
     public Image[] heart;
     public Image PowerTimer;
 
-    public void update()
+    private bool GameOn = true;
+    private float _currentTime;
+
+    public void start()
     {
-        Debug.Log("TIME TIME TIME");
+        _currentTime = 0;
+    }
+
+    public void Update()
+    {
         TimeRec();
     }
 
     public void TimeRec()
     {
-        TimeLive.text = Time.deltaTime.ToString();
+        if (GameOn == true)
+        {
+            //Debug.Log("TIME TIME TIME");
+            _currentTime = _currentTime + Time.deltaTime;
+        }
+        
+        TimeLive.text = _currentTime.ToString();
     }
 
 
