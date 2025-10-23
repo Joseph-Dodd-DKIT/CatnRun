@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     public float fireCountdown = 0;
     public GameObject ProjectilePrefad;
     int direction = 1;
+    int aniTime = 0;
+    bool atk = false;
+    public int attackAniCoolDown;
 
     public bool Powered = false;
 
@@ -74,7 +77,24 @@ public class Player : MonoBehaviour
             Projectile pr = Projectile.GetComponent<Projectile>();
             pr.Powered = Powered;
             pr.Launch(new Vector2(animator.GetInteger("Direction"), 0), 300);
+
+            animator.SetBool("Attack", true);
+            atk = true;
         }
+
+            if (atk == true)
+            {
+                aniTime++;
+                Debug.Log(" attack count");
+            }
+            
+            if (aniTime >= attackAniCoolDown && atk == true)
+            {
+                Debug.Log("Pause attack");
+                animator.SetBool("Attack", false);
+                atk = false;
+                aniTime = 0;
+            }
 
 
                     //power up
