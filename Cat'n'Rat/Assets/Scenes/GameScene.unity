@@ -743,11 +743,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1962,7 +1962,7 @@ MonoBehaviour:
   fireTimer: 0.5
   fireCountdown: 0
   ProjectilePrefad: {fileID: 5883922806067073620, guid: 0161629bbbbdb07498374cff3dc02ebb, type: 3}
-  attackAniCoolDown: 150
+  attackAniCoolDown: 60
   Powered: 0
   Lives: 3
   PowerTimer: {fileID: 0}
